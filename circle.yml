@@ -30,6 +30,7 @@ dependencies:
     pre:
         - sudo apt-get install doxygen graphviz
         # add further dependencies not available via maven central
+        - git clone https://github.com/LightJason/AgentSpeak.git && cd AgentSpeak && mvn install -DskipTests
         - git clone https://github.com/LightJason/SocialForce.git && cd SocialForce && mvn install -DskipTests
         - git clone git@github.com:TranKhacDat/SocialForceVehicles.git && cd SocialForceVehicles && mvn install -DskipTests
 
