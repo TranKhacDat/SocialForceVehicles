@@ -112,8 +112,8 @@ WARN_LOGFILE           =
 #---------------------------------------------------------------------------
 INPUT                  = src/main/java \
                          src/test/java \
-                         README.md \
-                         LICENSE.md
+                         readme.md \
+                         license.md
 INPUT_ENCODING         = UTF-8
 FILE_PATTERNS          = *.java \
                          *.md
