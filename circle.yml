@@ -11,6 +11,7 @@ general:
             - /gh-.*/
             - /binary-.*/
 
+
 machine:
     timezone:
         Europe/Berlin
@@ -25,6 +26,7 @@ machine:
     java:
         version: oraclejdk8
 
+
 dependencies:
 
     pre:
@@ -34,20 +36,20 @@ dependencies:
         - git clone https://github.com/LightJason/SocialForce.git && cd SocialForce && mvn install -DskipTests
         - git clone git@github.com:TranKhacDat/SocialForceVehicles.git && cd SocialForceVehicles && mvn install -DskipTests
 
+
 test:
     override:
         - mvn -Dbuild.number=${CIRCLE_BUILD_NUM} -Dbuild.commit=${CIRCLE_SHA1}
         - mvn site
 
     post:
-
         # Maven Site CircleCI build
         - mkdir -p $CIRCLE_TEST_REPORTS/junit/
         - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
-
         - git checkout master
         - mv -f target/$JAR /tmp
         - mv -f target/site /tmp
+
 
  deployment:
     production:
