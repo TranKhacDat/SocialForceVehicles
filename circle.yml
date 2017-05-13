@@ -46,7 +46,6 @@ test:
         # Maven Site CircleCI build
         - mkdir -p $CIRCLE_TEST_REPORTS/junit/
         - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
-        - git checkout master
         - mv -f target/$JAR /tmp
         - mv -f target/site /tmp
         # documentation deployment to gh-pages
