@@ -22,7 +22,7 @@
  */
 
 
-package org.lightjason.socialforce;
+package tran.socialforcevehicles;
 
 
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
