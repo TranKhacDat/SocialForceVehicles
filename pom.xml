@@ -47,6 +47,12 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.lightjason</groupId>
+            <artifactId>socialforce</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
         <!-- test -->
         <dependency>
             <groupId>junit</groupId>
